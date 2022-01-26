@@ -1,0 +1,27 @@
+{
+  "homepage": "https://kobweb.varabyte.com/",
+  "description": "Set up and manage your Compose for Web app",
+  "version": "0.9.2",
+  "license": "Apache-2.0",
+  "url": "https://github.com/varabyte/kobweb/releases/download/cli-v0.9.2/kobweb-0.9.2.zip",
+  "hash": "sha256:a7ef56b647e269bd3e0171dd90294ea6a4b5fe1024840219e2eea3dc7ba28ab7",
+  "extract_dir": "kobweb-0.9.2",
+  "env_add_path": "bin",
+  "suggest": {
+    "JDK": [
+      "java/oraclejdk",
+      "java/openjdk"
+    ]
+  },
+  "checkver": {
+    "url": "https://github.com/varabyte/kobweb/releases/latest",
+    "re": "v([\\d.]+).zip"
+  },
+  "autoupdate": {
+    "url": "https://github.com/varabyte/kobweb/releases/download/cli-v$version/kobweb-$version.zip",
+    "extract_dir": "kobweb-$version",
+    "hash": {
+      "url": "$url.sha256"
+    }
+  }
+}
